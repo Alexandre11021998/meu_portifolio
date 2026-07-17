@@ -6,11 +6,19 @@ st.set_page_config(page_title="ALEXANDRE.DEV", page_icon="🅰️", layout="cent
 
 init_custom_theme()
 
-
+# --- ÂNCORA INÍCIO ---
+st.markdown('<div id="inicio"></div>', unsafe_allow_html=True)
 
 # 2. Cabeçalho (Sobre mim)
-st.markdown('<img src="assets/profile.png" class="circular-profile-pic">', unsafe_allow_html=True)
-st.title("Olá, meu nome é Alexandre!")
+st.markdown(
+    """
+    <div class="profile-container">
+        <img src="assets/profile.png" class="circular-profile-pic">
+        <div class="status-badge">Disponível para Projetos</div>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
 st.subheader("Sou um desenvolvedor apaixonado por tecnologia, inovação e por resolver problemas reais através do código. Seja bem-vindo ao meu portfólio digital!")
 
 st.write(""" Combinando uma base sólida em suporte de TI e infraestrutura com o desenvolvimento de software, hoje eu foco na criação de aplicações web eficientes e modernas utilizando TypeScript, Next.js e Node.js. Além disso, adoro construir automações inteligentes com IA e n8n para transformar processos manuais em fluxos digitais otimizados.""")
@@ -18,7 +26,44 @@ st.write(""" Combinando uma base sólida em suporte de TI e infraestrutura com o
 # Botão para baixar currículo
 st.download_button(label="Baixar Currículo", data="Seu curriculo aqui", file_name="CURRICULO_TI.pdf")
 
+st.write("")
+
+col_esq, col_btn1, col_btn2, col_dir = st.columns([1.5, 2, 2, 1.5])
+
+with col_btn1:
+    if st.button("Iniciar Projeto",type="primary", use_container_width=True):
+        st.info("Ação de iniciar projeto sera configurada em breve")
+        
+with col_btn2:
+    if st.button("Ver Projetos", type="secondary", use_container_width=True):
+        st.info("Ação de ver projetos sera configurada em breve")        
 st.markdown("---")
+
+st.write("") # Um pequeno espaço em branco antes do quadro
+
+with st.container(border=True):
+    st.subheader("Vamos tirar o seu projeto do papel?")
+    st.write("Se você tem uma ideia inovadora, um desafio técnico ou precisa otimizar seus processos através de automações inteligentes, escolha como prefere falar comigo:")
+    
+    # Criando 3 colunas para colocar todos os botões lado a lado e organizados
+    col_wa, col_lnk, col_mail = st.columns(3)
+    
+    with col_wa:
+        # Botão principal (Verde Oliva em Destaque)
+        texto_whatsapp = "Olá Alexandre! Vi seu portfólio e gostaria de iniciar um projeto."
+        link_whatsapp = f"https://wa.me/55419998135013?text={texto_whatsapp.replace(' ', '%20')}"
+        st.link_button("WhatsApp", link_whatsapp, use_container_width=True, type="primary")
+        
+    with col_lnk:
+        # Botão Secundário (Transparente / Outline)
+        st.link_button("LinkedIn", "https://www.linkedin.com/in/alexandre-vinicius-costa-0a6422405/", use_container_width=True, type="secondary")
+        
+           
+    with col_mail:
+        # Botão Secundário que abre o app de e-mail do cliente já preenchido
+        st.link_button("E-mail", "mailto:costav.alexandre@gmail.com", use_container_width=True, type="secondary")
+# --- ÂNCORA HABILIDADES ---
+st.markdown('<div id="habilidades"></div>', unsafe_allow_html=True)
 
 # 3. Seção de Habilidades
 st.header("Habilidades Técnicas")
@@ -37,6 +82,10 @@ with col3:
     st.write("- Git e GitHub\n- Scrum e Kanban\n- AWS\n- ITIL, PMBOK e COBIT\n- N8N")
         
 st.markdown("---")
+
+
+# --- ÂNCORA PROJETOS ---
+st.markdown('<div id="projetos"></div>', unsafe_allow_html=True)
 
 # 4. Projetos em Destaque
 st.header("Projetos em Destaque")
@@ -99,9 +148,13 @@ with col_p5:
 
 st.markdown("---")
 
+
+# --- ÂNCORA CONTATO ---
+st.markdown('<div id="contato"></div>', unsafe_allow_html=True)
+
 # 5. CONTATO
 st.header("Vamos nos conectar?")
-st.write("Sinta-se à vontade para entrar em contato através de qualquer uma das redes abaixo:")
+st.write("Sinta-se à voltar para entrar em contato através de qualquer uma das redes abaixo:")
 
 col_linkedin, col_github, col_email = st.columns(3)
 
@@ -109,8 +162,7 @@ with col_linkedin:
     st.link_button("LinkedIn", "https://www.linkedin.com/in/alexandre-vinicius-costa-0a6422405/", type="primary")
 
 with col_github:
-    st.link_button("GitHub", "https://github.com/Alexandre11021998", type="primary"         )
+    st.link_button("GitHub", "https://github.com/Alexandre11021998", type="primary")
 
 with col_email:
-    # Como e-mail não é um link clicável de navegador comum, um botão informativo fica ótimo
     st.button("costav.alexandre@gmail.com", disabled=True)
