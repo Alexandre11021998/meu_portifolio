@@ -2,7 +2,7 @@ import streamlit as st
 
 def render_projetos():
     # --- ÂNCORA PROJETOS ---
-    st.markdown('<div id="projetos"></div>', unsafe_allow_html=True)
+    st.markdown('<span id="projetos"></span>', unsafe_allow_html=True)
 
     st.header("Projetos em Destaque")
 

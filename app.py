@@ -9,6 +9,7 @@ from components.projetos import render_projetos
 
 # 1. Configuração global da página
 st.set_page_config(page_title="ALEXANDRE.DEV", page_icon="🅰️", layout="centered")
+st.markdown("<style>html { scroll-behavior: smooth; }</style>", unsafe_allow_html=True)
 
 # Injeta a Navbar e os Temas CSS customizados
 init_custom_theme()

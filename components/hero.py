@@ -67,7 +67,30 @@ def render_hero():
         render_quadro_contato()
             
     with col_btn2:
-        if st.button("Ver Projetos", type="secondary", use_container_width=True):
-            st.info("Ação de ver projetos será configurada em breve")        
+    # Criamos um botão HTML customizado que aponta para #projetos na mesma aba
+     with col_btn2:
+      st.markdown(
+        """
+        <a href="#projetos" target="_self" style="text-decoration: none; width: 100%; display: block;">
+            <button style="
+                width: 100%;
+                background-color: transparent;
+                color: #606C38; 
+                border: 1px solid currentColor;
+                padding: 10px 16px;
+                border-radius: 8px;
+                cursor: pointer;
+                font-weight: 500;
+                font-size: 16px;
+                opacity: 0.85; /* Dá um leve toque moderno de transparência */
+                transition: all 0.2s ease-in-out;
+            " onmouseover="this.style.borderColor='#ff4b4b'; this.style.color='#ff4b4b'; this.style.opacity='1';" 
+               onmouseout="this.style.borderColor='currentColor'; this.style.color='inherit'; this.style.opacity='0.85';">
+                Ver meus Projetos
+            </button>
+        </a>
+        """,
+        unsafe_allow_html=True
+    )
             
     st.markdown("---")
