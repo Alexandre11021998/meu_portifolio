@@ -36,7 +36,7 @@ def render_projetos():
         st.write("**Tecnologias:** Next.js, TypeScript, Node.js, PostgreSQL, Prisma ORM, Tailwind CSS")
         st.write("**Impacto:** Melhorou a eficiência operacional e a experiência do paciente.")
         st.link_button("Código no GitHub", "https://github.com/Alexandre11021998/Zelo", type="primary")
-        st.link_button("Acesse o site", "https://zelo-hub.lovable.app/", type="primary")
+        st.link_button("Acesse o site", "https://care-progress-dash.vercel.app/", type="primary")
 
     st.write("") 
 
@@ -59,7 +59,7 @@ def render_projetos():
         st.image("assets/ferramentas_na_mao.png", caption="Interface inicial do Ferramentas na Mão", use_container_width=True)
         st.write("**Tecnologias:** Next.js, Node.js, PostgreSQL, Prisma")
         st.write("") # ajuste de espaçamento
-        st.link_button("Código no GitHub", "https://github.com/Alexandre11021998/ferramentas-na-mao", type="primary")
-        st.link_button("Acesse o site", "https://ferramenta-na-m-o.vercel.app/?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGngKOYbZ8cKrPZkQQoPfi625amgQWCiYU0imwO-OS_hmpSNkoRL66D6GpXdbA_aem_ld0Z08M3kckLDZK39cfGdQ", type="primary" )
+        st.link_button("Código no GitHub", "https://github.com/Alexandre11021998/ferramenta-na-m-o", type="primary")
+        
 
     st.markdown("---")

@@ -13,7 +13,7 @@ def render_quadro_contato():
             st.link_button("WhatsApp", link_whatsapp, use_container_width=True, type="primary")
             
         with col_lnk:
-            st.link_button("LinkedIn", "https://www.linkedin.com/in/alexandre-vinicius-costa-0a6422405/", use_container_width=True, type="secondary")
+            st.link_button("LinkedIn", "https://www.linkedin.com/in/alexandre-vinicius-costa-0a6422405", use_container_width=True, type="secondary")
             
         with col_mail:
             st.link_button("E-mail", "mailto:costav.alexandre@gmail.com", use_container_width=True, type="secondary")
@@ -28,7 +28,7 @@ def render_rodape_redes():
     col_linkedin, col_github, col_email = st.columns(3)
 
     with col_linkedin:
-        st.link_button("LinkedIn", "https://www.linkedin.com/in/alexandre-vinicius-costa-0a6422405/", type="primary")
+        st.link_button("LinkedIn", "https://www.linkedin.com/in/alexandre-vinicius-costa-0a6422405", type="primary")
 
     with col_github:
         st.link_button("GitHub", "https://github.com/Alexandre11021998", type="primary")

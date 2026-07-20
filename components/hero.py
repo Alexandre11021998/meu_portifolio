@@ -18,7 +18,7 @@ def render_hero():
             img_base64 = base64.b64encode(image_file.read()).decode()
     
     # Cabeçalho (Sobre mim)
-    # 3. CSS Injetado para garantir o círculo perfeito e o preenchimento
+    # 3. CSS Injetado para garantir o círculo  e o preenchimento
     st.markdown(
         f"""
         <style>
@@ -56,9 +56,9 @@ def render_hero():
     st.write(""" Combinando uma base sólida em suporte de TI e infraestrutura com o desenvolvimento de software, hoje eu foco na criação de aplicações web eficientes e modernas utilizando TypeScript, Next.js e Node.js. Além disso, adoro construir automações inteligentes com IA e n8n para transformar processos manuais em fluxos digitais otimizados.""")
 
     # Botão para baixar currículo
-    st.download_button(label="Baixar Currículo", data="Seu curriculo aqui", file_name="CURRICULO_TI.pdf")
+    #st.download_button(label="Baixar Currículo", data="Seu curriculo aqui", file_name="CURRICULO_TI.pdf")
 
-    st.write("")
+   # st.write("")
 
     col_esq, col_btn1, col_btn2, col_dir = st.columns([1.5, 2, 2, 1.5])
 
@@ -67,25 +67,28 @@ def render_hero():
         render_quadro_contato()
             
     with col_btn2:
-    # Criamos um botão HTML customizado que aponta para #projetos na mesma aba
+     #projetos na mesma aba
      with col_btn2:
       st.markdown(
         """
         <a href="#projetos" target="_self" style="text-decoration: none; width: 100%; display: block;">
             <button style="
                 width: 100%;
+                height: 38px; /* Força a mesma altura padrão dos botões do Streamlit */
                 background-color: transparent;
                 color: #606C38; 
-                border: 1px solid currentColor;
-                padding: 10px 16px;
+                border: 1px solid #606C38;
+                padding: 0px 16px; /* Ajustado para alinhar verticalmente com a altura fixa */
                 border-radius: 8px;
                 cursor: pointer;
                 font-weight: 500;
                 font-size: 16px;
-                opacity: 0.85; /* Dá um leve toque moderno de transparência */
+                display: flex;
+                align-items: center;
+                justify-content: center;
                 transition: all 0.2s ease-in-out;
-            " onmouseover="this.style.borderColor='#ff4b4b'; this.style.color='#ff4b4b'; this.style.opacity='1';" 
-               onmouseout="this.style.borderColor='currentColor'; this.style.color='inherit'; this.style.opacity='0.85';">
+            " onmouseover="this.style.backgroundColor='rgba(96, 108, 56, 0.1)';" 
+               onmouseout="this.style.backgroundColor='transparent';">
                 Ver meus Projetos
             </button>
         </a>
