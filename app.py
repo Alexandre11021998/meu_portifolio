@@ -18,13 +18,22 @@ init_custom_theme()
 # Injeta a Navbar responsiva fixa no topo (Computador e Celular)
 render_navegacao()
 
-# 2. Renderização das seções estruturadas
+# 2. Renderização das seções estruturadas com as âncoras para o menu
+
+# --- SEÇÃO: INÍCIO ---
+st.markdown('<div id="inicio"></div>', unsafe_allow_html=True)
 render_hero()
 
-#render_quadro_contato()
-
+# --- SEÇÃO: HABILIDADES ---
+st.markdown('<div id="habilidades"></div>', unsafe_allow_html=True)
 render_habilidades()
 
-render_projetos()
+# --- SEÇÃO: PROJETOS ---
+st.markdown('<div id="projetos"></div>', unsafe_allow_html=True)
+render_projetos() # Nota: Ajustado para o nome da função que você importou acima (render_projetos)
 
+# --- SEÇÃO: CONTATO ---
+st.markdown('<div id="contato"></div>', unsafe_allow_html=True)
+# Se você for reativar o quadro de contato futuramente, a âncora já está no lugar certo
+# render_quadro_contato() 
 render_rodape_redes()
