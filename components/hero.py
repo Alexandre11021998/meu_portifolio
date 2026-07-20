@@ -2,6 +2,8 @@ import streamlit as st
 import base64
 import os
 
+from .contato import render_quadro_contato
+
 def render_hero():
     # --- ÂNCORA INÍCIO ---
     st.markdown('<div id="inicio"></div>', unsafe_allow_html=True)
@@ -61,8 +63,8 @@ def render_hero():
     col_esq, col_btn1, col_btn2, col_dir = st.columns([1.5, 2, 2, 1.5])
 
     with col_btn1:
-        if st.button("Iniciar Projeto", type="primary", use_container_width=True):
-            st.info("Ação de iniciar projeto será configurada em breve")
+     if st.button("Iniciar Projeto", type="primary", use_container_width=True):
+        render_quadro_contato()
             
     with col_btn2:
         if st.button("Ver Projetos", type="secondary", use_container_width=True):

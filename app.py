@@ -16,7 +16,7 @@ init_custom_theme()
 # 2. Renderização das seções estruturadas
 render_hero()
 
-render_quadro_contato()
+#render_quadro_contato()
 
 render_habilidades()
 

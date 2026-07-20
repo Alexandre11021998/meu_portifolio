@@ -1,10 +1,8 @@
 import streamlit as st
 
+@st.dialog("Vamos tirar o seu projeto do papel?")
 def render_quadro_contato():
-    st.write("") # Um pequeno espaço em branco antes do quadro
-
-    with st.container(border=True):
-        st.subheader("Vamos tirar o seu projeto do papel?")
+              
         st.write("Se você tem uma ideia inovadora, um desafio técnico ou precisa otimizar seus processos através de automações inteligentes, escolha como prefere falar comigo:")
         
         col_wa, col_lnk, col_mail = st.columns(3)
