@@ -9,7 +9,7 @@ def render_quadro_contato():
         
         with col_wa:
             texto_whatsapp = "Olá Alexandre! Vi seu portfólio e gostaria de iniciar um projeto."
-            link_whatsapp = f"https://wa.me/55419998135013?text={texto_whatsapp.replace(' ', '%20')}"
+            link_whatsapp = f"https://wa.me/5541998135013?text={texto_whatsapp.replace(' ', '%20')}"
             st.link_button("WhatsApp", link_whatsapp, use_container_width=True, type="primary")
             
         with col_lnk:
