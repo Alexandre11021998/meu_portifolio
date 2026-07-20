@@ -39,7 +39,7 @@ def render_hero():
             }}
             .status-badge {{
                 margin-top: 12px;
-                /* Adicione aqui o restante do seu estilo para o badge se necessário */
+                
             }}
         </style>
         
