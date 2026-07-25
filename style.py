@@ -1,15 +1,23 @@
 # styles.py
 import streamlit as st
 
+import streamlit as st
+
 def load_css():
     st.markdown(
         """
         <style>
-        /* Remover topo*/
-        .block-container {
-        padding-top: 1rem !important;
-        padding-bottom: 0rem !important;
-        }
+            /* Remove o topo exagerado no mobile */
+            .block-container {
+                padding-top: 1rem !important;
+                padding-bottom: 0rem !important;
+            }
+            
+            /* Reduz a altura do header nativo */
+            header[data-testid="stHeader"] {
+                background-color: transparent;
+                height: 2rem;
+            }
         </style>
         """,
         unsafe_allow_html=True
