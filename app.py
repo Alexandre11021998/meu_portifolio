@@ -10,7 +10,7 @@ from components.habilidades import render_habilidades
 from components.projetos import render_projetos
 
 # Remover topo
-load_css
+load_css()
 # 1. Configuração global da página
 st.set_page_config(page_title="ALEXANDRE.DEV", page_icon="🅰", layout="centered")
 
