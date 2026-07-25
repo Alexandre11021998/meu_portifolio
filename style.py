@@ -1,6 +1,20 @@
 # styles.py
 import streamlit as st
 
+def load_css():
+    st.markdown(
+        """
+        <style>
+        /* Remover topo*/
+        .block-container {
+        padding-top: 1rem !important;
+        padding-bottom: 0rem !important;
+        }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
+
 def init_custom_theme():
     """Injeta o fundo degradê e os estilos do cabeçalho de perfil."""
     st.markdown(
