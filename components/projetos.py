@@ -26,7 +26,7 @@ def render_projetos():
         st.write("**Tecnologias:** React, PostgreSQL, GitHub Actions") 
         st.write("**Impacto:** Digitalização de processos manuais reduzindo tempo de cadastro e procura.")
         st.link_button("Código no GitHub", "https://github.com/Alexandre11021998/keymaster", type="primary")
-        st.link_button("Acesse o site", "https://keywarden-hub.lovable.app/", type="primary")
+        st.link_button("Acesse o site", "https://keymaster-theta.vercel.app/", type="primary")
 
     with col_p3:
         st.subheader("3. Zelo")
